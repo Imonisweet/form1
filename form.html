@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Apply for our mentorship programme.">
+    <title>Mentorship Application Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Mentorship Programme Application</h1>
+        <p>Complete the form below to apply for our mentorship programme.</p>
+    </header>
+
+    <main>
+        <form action="/submit-application" method="post">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="full-name">Full Name:</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="full_name"
+                        minlength="3"
+                        maxlength="100"
+                        required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        maxlength="100"
+                        required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+234 800 000 0000"
+                        pattern="[+0-9 ]{7,20}"
+                        required>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label>
+                    <input
+                        type="date"
+                        id="dob"
+                        name="date_of_birth"
+                        max="2008-12-31"
+                        required>
+                </p>
+
+                <p>Gender:</p>
+
+                <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    required>
+                <label for="male">Male</label>
+
+                <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female">
+                <label for="female">Female</label>
+
+                <input
+                    type="radio"
+                    id="prefer-not-to-say"
+                    name="gender"
+                    value="prefer_not_to_say">
+                <label for="prefer-not-to-say">Prefer not to say</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Development Information</legend>
+
+                <p>
+                    <label for="experience">Current Experience Level:</label>
+                    <select id="experience" name="experience_level" required>
+                        <option value="">-- Select Experience Level --</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </p>
+
+                <p>Areas of Interest:</p>
+
+                <input
+                    type="checkbox"
+                    id="frontend"
+                    name="interests"
+                    value="frontend">
+                <label for="frontend">Frontend Development</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="backend"
+                    name="interests"
+                    value="backend">
+                <label for="backend">Backend Development</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="fullstack"
+                    name="interests"
+                    value="fullstack">
+                <label for="fullstack">Full Stack Development</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="mobile"
+                    name="interests"
+                    value="mobile">
+                <label for="mobile">Mobile Development</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="devops"
+                    name="interests"
+                    value="devops">
+                <label for="devops">Cloud and DevOps</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="cybersecurity"
+                    name="interests"
+                    value="cybersecurity">
+                <label for="cybersecurity">Cybersecurity</label>
+
+                <p>
+                    <label for="learning-track">Preferred Learning Track:</label>
+                    <select
+                        id="learning-track"
+                        name="learning_track"
+                        required>
+
+                        <option value="">-- Select Learning Track --</option>
+                        <option value="self-paced">Self-Paced Learning</option>
+                        <option value="group">Group Mentorship</option>
+                        <option value="one-on-one">One-on-One Mentorship</option>
+                        <option value="project-based">Project-Based Learning</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="github">GitHub Profile URL:</label>
+                    <input
+                        type="url"
+                        id="github"
+                        name="github_url"
+                        placeholder="https://github.com/username">
+                </p>
+
+                <p>
+                    <label for="motivation">
+                        Why do you want to join this mentorship programme?
+                    </label>
+                    <br>
+                    <textarea
+                        id="motivation"
+                        name="motivation"
+                        rows="6"
+                        cols="50"
+                        minlength="30"
+                        maxlength="1000"
+                        placeholder="Tell us about your goals and expectations..."
+                        required></textarea>
+                </p>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Availability and Agreement</legend>
+
+                <p>
+                    <label for="availability">Preferred Availability:</label>
+                    <select
+                        id="availability"
+                        name="availability"
+                        required>
+
+                        <option value="">-- Select Availability --</option>
+                        <option value="weekdays">Weekdays</option>
+                        <option value="weekends">Weekends</option>
+                        <option value="mornings">Mornings</option>
+                        <option value="afternoons">Afternoons</option>
+                        <option value="evenings">Evenings</option>
+                        <option value="flexible">Flexible Schedule</option>
+                    </select>
+                </p>
+
+                <p>
+                    <input
+                        type="checkbox"
+                        id="agreement"
+                        name="mentorship_agreement"
+                        value="accepted"
+                        required>
+
+                    <label for="agreement">
+                        I have read and agree to follow the mentorship
+                        programme rules, respect other participants,
+                        attend scheduled sessions, and complete assigned tasks.
+                    </label>
+                </p>
+
+            </fieldset>
+
+            <p>
+                <button type="submit">Submit Application</button>
+                <button type="reset">Clear Form</button>
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mentorship Programme. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
